@@ -49,18 +49,58 @@ c=a**2
 
 print "c[np.array([2,3,4])] = ", c[np.array([2,3,4])]
 
+###############################################
+print "============\nAccessing data"
 
+print "c > 4 = ", c>4
 
+print "c[c > 4] = ", c[c>4]
 
+###############################################
+print "============\nTrimming outliers with clip()"
 
+print "c.clip(0,4) --> ", c.clip(0,4)
 
+###############################################
+print "============\nHandling nan's"
 
+d = np.array([1,2,np.NAN,3,4])
 
+print "d = ",d
 
+print "np.isnan(d) --> ", np.isnan(d)
 
+###############################################
+print "============\nRemoving nan's"
 
+print "d[- np.isnan(d)] --> ", d[-np.isnan(d)]
 
+###############################################
+print "============\nMean of an array"
 
+print "np.mean(d[- np.isnan(d)]) --> ", np.mean(d[- np.isnan(d)])
+
+###############################################
+print "============\nDatatypes"
+
+print "d.dtype --> ", d.dtype
+
+###############################################
+print "============\nComparing runtimes"
+
+import timeit
+
+normal_py_seconds = timeit.timeit('sum(x*x for x in xrange(1000)',number=10000)
+
+naive_np_seconds = timeit.timeit('sum(na*na)',setup="import numpy as np; na = np.arange(1000)",number=10000)
+
+good_np_seconds  = timeit.timeit('na.dot(na)',setup="import numpy as np; na = np.arange(1000)",number=10000)
+
+print "Normal python = %f seconds" %normal_py_seconds
+
+print "Naive NumPy = %f seconds" %naive_np_seconds
+
+print "Good NumPy = %f seconds" %good_np_seconds
 
 
 
