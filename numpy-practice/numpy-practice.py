@@ -109,12 +109,36 @@ print "type(e) --> ", type(e)
 ###############################################
 print "============\nCreating advanced arrays"
 
+a1 = np.zeros((3,4))
 
+print "a1 = zeros((3,4)) --> ", a1
 
+a2 = np.ones((2,3,4), dtype=np.int16)
 
+print "a2 = np.ones((2,3,4), dtype=int16) --> ", a2
 
+a3 = np.empty((2,3), dtype=np.float64)
 
+print "a2 = np.ones((2,3,4), dtype=int16) --> ", a3
 
+###############################################
+print "============\nCreating ranges"
+
+b1 = np.arange(10,40,5)
+
+print "b1 = np.arrange(10,30,5) --> ", b1
+
+b2 = np.arange(0,2,0.3)
+
+print "b2 = np.arange(0,2,0.3) --> ", b2
+
+b3 = np.linspace(0,2,9)  # 9 numbers
+
+print "b3 = np.linspace(0,2,9) --> ", b3
+
+b4 = np.linspace(0, 2 * np.pi, 10)  # 10 numbers
+
+print "b4 = np.linspace(0, 2 * np.pi, 10) --> ", b4
 
 
 
