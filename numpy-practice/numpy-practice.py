@@ -86,21 +86,36 @@ print "============\nDatatypes"
 print "d.dtype --> ", d.dtype
 
 ###############################################
-print "============\nComparing runtimes"
+print "============\nMore basic operations"
 
-import timeit
+e = np.arange(15).reshape(3, 5)
 
-normal_py_seconds = timeit.timeit('sum(x*x for x in xrange(1000)',number=10000)
+print "e = ", e
 
-naive_np_seconds = timeit.timeit('sum(na*na)',setup="import numpy as np; na = np.arange(1000)",number=10000)
+print "e.ndim = ", e.ndim
 
-good_np_seconds  = timeit.timeit('na.dot(na)',setup="import numpy as np; na = np.arange(1000)",number=10000)
+print "e.shape = ", e.shape
 
-print "Normal python = %f seconds" %normal_py_seconds
+print "e.size = ", e.size
 
-print "Naive NumPy = %f seconds" %naive_np_seconds
+print "e.dtype = ", e.dtype
 
-print "Good NumPy = %f seconds" %good_np_seconds
+print "e.itemsize = ", e.itemsize
+
+print "e.data = ", e.data
+
+print "type(e) --> ", type(e)
+
+###############################################
+print "============\nCreating advanced arrays"
+
+
+
+
+
+
+
+
 
 
 
