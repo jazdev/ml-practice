@@ -140,7 +140,8 @@ b4 = np.linspace(0, 2 * np.pi, 10)  # 10 numbers
 
 print "b4 = np.linspace(0, 2 * np.pi, 10) --> ", b4
 
-
+###############################################
+print "============\nBasic operations"
 
 
 
