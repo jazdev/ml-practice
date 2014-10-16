@@ -16,3 +16,4 @@ min_non_setosa = plength[~is_setosa].min()
 
 print('Maximum of setosa: {0}.'.format(max_setosa))
 print('Minimum of others: {0}.'.format(min_non_setosa))
+
