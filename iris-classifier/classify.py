@@ -17,3 +17,14 @@ min_non_setosa = plength[~is_setosa].min()
 print('Maximum of setosa: {0}.'.format(max_setosa))
 print('Minimum of others: {0}.'.format(min_non_setosa))
 
+#
+# a very simple model
+#
+for e in features[:,2]:
+	if e <= max_setosa: 
+		print 'Iris Setosa'
+	else: 
+		print 'Iris Virginica or Iris Versicolour'
+
+
+
